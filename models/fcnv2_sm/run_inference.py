@@ -3,19 +3,19 @@ import datetime
 
 # make sure to set the environment variable MODEL_REGISTRY before running this script
 # see documentation in the README and the docstrings for both of these functions for more information
-run_custom_inference(
-    data_source_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/initial_conditions/processed_ic_sets/default/",
-    output_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/output/ideal_default_60t.nc",
-    n_iters=60,
-    start_time=datetime.datetime(1970, 1, 1),
-    device="cpu",
-    vocal=True
-)
+# run_custom_inference(
+#     data_source_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/initial_conditions/processed_ic_sets/default/",
+#     output_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/output/ideal_default_60t.nc",
+#     n_iters=60,
+#     start_time=datetime.datetime(1970, 1, 1),
+#     device="cpu",
+#     vocal=True
+# )
 
 run_simple_inference(
-    output_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/output/era5_60t.nc",
-    n_iters=60,
-    start_time=datetime.datetime(1970, 1, 1),
+    output_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/output/kwesi_test.nc",
+    n_iters=500,
+    start_time=datetime.datetime(2010, 1, 1),
     device="cpu",
     vocal=True
 )
