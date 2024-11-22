@@ -1,0 +1,19 @@
+/N/u/jmelms/BigRed200/envs/earth2mip/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+  warnings.warn(
+Traceback (most recent call last):
+  File "/geode2/home/u040/jmelms/BigRed200/projects/earth2mip_inference/models/fcnv2_sm/run_inference.py", line 8, in <module>
+    run_custom_inference(
+  File "/geode2/home/u040/jmelms/BigRed200/projects/earth2mip_inference/models/fcnv2_sm/inference_utils.py", line 203, in run_custom_inference
+    package, sfno_inference_model, data_source = _setup(
+  File "/geode2/home/u040/jmelms/BigRed200/projects/earth2mip_inference/models/fcnv2_sm/inference_utils.py", line 37, in _setup
+    sfno_inference_model = fcnv2_sm_load(package, device=device)
+  File "/N/u/jmelms/BigRed200/envs/earth2mip/lib/python3.10/site-packages/earth2mip/networks/fcnv2_sm.py", line 155, in load
+    weights = torch.load(weights_path, map_location=device, weights_only=True)
+  File "/N/u/jmelms/BigRed200/envs/earth2mip/lib/python3.10/site-packages/torch/serialization.py", line 1096, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options 
+	(1) Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL ruamel.yaml.scalarfloat.ScalarFloat was not an allowed global by default. Please use `torch.serialization.add_safe_globals([ScalarFloat])` to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
