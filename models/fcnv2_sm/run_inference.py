@@ -7,10 +7,10 @@ from time import perf_counter
 start = perf_counter()
 run_custom_inference(
     data_source_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/initial_conditions/processed_ic_sets/default/",
-    output_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/output/ideal_default_1460t.nc",
-    n_iters=1460,
+    output_path="/N/slate/jmelms/projects/FCN_dynamical_testing/data/output/ideal_default_20t.nc",
+    n_iters=20,
     start_time=datetime.datetime(1970, 1, 1),
-    device="cpu",
+    device="cuda", # cpu or cuda
     vocal=True
 )
 

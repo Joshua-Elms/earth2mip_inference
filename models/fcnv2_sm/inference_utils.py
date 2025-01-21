@@ -38,7 +38,7 @@ def _setup(data_source_path, device, ngpus, vocal, mode: str):
 
     if vocal:
         stop = perf_counter()
-        print(f"Model loaded. Duration: {stop - start:.2f} seconds")
+        print(f"Model loaded on device={device}. Duration: {stop - start:.2f} seconds")
 
     # Load data source
     if mode == "custom":
